@@ -41,8 +41,7 @@ public class EmployeeResource
     	System.out.println(e1);
     	 s.create(e1);
     	 return e1;
-    }
-    
+    } 
     
     @PUT
     @Path("{empu}")
@@ -52,18 +51,18 @@ public class EmployeeResource
     	s.update(e1);
     	return e1;
     }
+    
 //    @DELETE 
 //    @Path("/{empd}")
 //    @Produces(MediaType.APPLICATION_JSON)
 //    public void deleteEmp(Employees e1) {
 //    	s.delete(e1);
 //    }
+    
     @DELETE
     @Path("/{empid}")
     @Produces(MediaType.APPLICATION_JSON)
     public void deleteemp(@PathParam("empid")int empid) {
          s.delete(empid);
-    }
-
-    
+    }   
 }
